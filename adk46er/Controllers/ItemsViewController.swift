@@ -20,6 +20,24 @@ class ItemsViewController: UITableViewController {
         tableView.estimatedRowHeight = 75
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showItem"?:
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = itemStore.allItems[row]
+                let detailVC = segue.destination as! DetailViewController
+                detailVC.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
     override func tableView(_ tableView : UITableView, numberOfRowsInSection section : Int) -> Int {
         return itemStore.allItems.count
     }

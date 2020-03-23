@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let itemStore = HikeItemStore()
-        let itemsController = window!.rootViewController as! ItemsViewController
+        let navController = window!.rootViewController as! UINavigationController
+        let itemsController = navController.topViewController as! ItemsViewController
         itemsController.itemStore = itemStore
     }
 
