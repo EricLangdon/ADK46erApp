@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		32A37BC924281D69001A2A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A37BC724281D69001A2A03 /* LaunchScreen.storyboard */; };
 		32A37BD424281FAA001A2A03 /* HikeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD324281FAA001A2A03 /* HikeItem.swift */; };
 		32A37BD6242822D3001A2A03 /* HikeItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD5242822D3001A2A03 /* HikeItemStore.swift */; };
+		32A37BD824286856001A2A03 /* HikeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD724286856001A2A03 /* HikeItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		32A37BCA24281D69001A2A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32A37BD324281FAA001A2A03 /* HikeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeItem.swift; sourceTree = "<group>"; };
 		32A37BD5242822D3001A2A03 /* HikeItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeItemStore.swift; sourceTree = "<group>"; };
+		32A37BD724286856001A2A03 /* HikeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				32A37BD324281FAA001A2A03 /* HikeItem.swift */,
 				32A37BD5242822D3001A2A03 /* HikeItemStore.swift */,
+				32A37BD724286856001A2A03 /* HikeItemCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,7 +139,7 @@
 				};
 			};
 			buildConfigurationList = 32A37BB124281D5C001A2A03 /* Build configuration list for PBXProject "adk46er" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -173,6 +176,7 @@
 			files = (
 				32A37BBE24281D5C001A2A03 /* ItemsViewController.swift in Sources */,
 				32A37BC424281D5C001A2A03 /* adk46er.xcdatamodeld in Sources */,
+				32A37BD824286856001A2A03 /* HikeItemCell.swift in Sources */,
 				32A37BD424281FAA001A2A03 /* HikeItem.swift in Sources */,
 				32A37BD6242822D3001A2A03 /* HikeItemStore.swift in Sources */,
 				32A37BBA24281D5C001A2A03 /* AppDelegate.swift in Sources */,
@@ -320,7 +324,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5N6HN6KKNW;
 				INFOPLIST_FILE = adk46er/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -328,6 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cs295.emlangdo.adk46er;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,7 +344,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5N6HN6KKNW;
 				INFOPLIST_FILE = adk46er/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cs295.emlangdo.adk46er;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

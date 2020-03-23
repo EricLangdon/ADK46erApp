@@ -33,4 +33,14 @@ class HikeItemStore {
             allItems.remove(at: idx)
         }
     }
+    
+    func moveItem (from fIdx : Int, to tIdx : Int) {
+        if fIdx == tIdx {
+            return
+        }
+        
+        let mItem = allItems[fIdx]
+        allItems.remove(at: fIdx)
+        allItems.insert(mItem, at: tIdx)
+    }
 }
