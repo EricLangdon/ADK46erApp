@@ -15,7 +15,11 @@ class DetailViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     
-    var item : HikeItem!
+    var item : HikeItem! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
     
     let numberFormatter : NumberFormatter = {
         let formatter = NumberFormatter()
@@ -46,6 +50,7 @@ class DetailViewController : UIViewController, UITextFieldDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        view.endEditing(true)
         
         item.name = nameField.text ?? ""
         item.serialNum = serialNumField.text
@@ -63,6 +68,12 @@ class DetailViewController : UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
     
 }
 

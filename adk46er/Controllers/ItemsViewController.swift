@@ -10,6 +10,11 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     
+    required init?(coder c: NSCoder) {
+        super.init(coder : c)
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
     var itemStore : HikeItemStore!
 
     //Overrides
@@ -89,7 +94,7 @@ class ItemsViewController: UITableViewController {
     }
     
     //IBAction Buttons
-    @IBAction func addNewItem(_ sender : UIButton) {
+    @IBAction func addNewItem(_ sender : UIBarButtonItem) {
         
         let newItem = itemStore.createItem()
         
@@ -98,16 +103,5 @@ class ItemsViewController: UITableViewController {
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
-    
-    @IBAction func toggleEditMode(_ sender : UIButton) {
-        if isEditing {
-            sender.setTitle("Edit", for: .normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Done", for: .normal)
-            setEditing(true, animated: true)
-        }
-    }
-    
 }
 
