@@ -8,12 +8,14 @@
 
 import UIKit
 
-class DetailViewController : UIViewController, UITextFieldDelegate {
+class DetailViewController : UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var nameField : UITextField!
     @IBOutlet var serialNumField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    
     
     var item : HikeItem! {
         didSet {
@@ -35,6 +37,8 @@ class DetailViewController : UIViewController, UITextFieldDelegate {
         formatter.timeStyle = .none
         return formatter
     }()
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -69,10 +73,28 @@ class DetailViewController : UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let img = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imageView.image = img
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
+    @IBAction func uploadPicture(_ sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     
 }
