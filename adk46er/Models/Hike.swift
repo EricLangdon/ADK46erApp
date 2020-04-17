@@ -50,4 +50,22 @@ class Hike : NSObject {
             self.init(n : "", v : 0, s : nil)
         }
     }
+    
+    required init(coder ad: NSCoder) {
+        name = ad.decodeObject(forKey: "name") as! String
+        date = ad.decodeObject(forKey: "date") as! Date
+        key = ad.decodeObject(forKey: "key") as! String
+        serialNum = ad.decodeObject(forKey: "serialNum") as! String?
+        valDollars = ad.decodeObject(forKey: "value") as! Int
+        super.init()
+    }
+    
+    //Functions
+    func encode (with ac: NSCoder) {
+        ac.encode(name, forKey: "name")
+        ac.encode(date, forKey: "date")
+        ac.encode(serialNum, forKey: "serialNum")
+        ac.encode(key, forKey: "key")
+        ac.encode(valDollars, forKey: "value")
+    }
 }

@@ -194,9 +194,9 @@
                                     <constraint firstAttribute="height" constant="44" id="Dwd-PJ-v4I"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" image="camera.fill" catalog="system" id="z7g-Aq-TDV">
+                                    <barButtonItem systemItem="trash" id="kvq-XA-U4A">
                                         <connections>
-                                            <action selector="uploadPicture:" destination="udI-Tl-fwg" id="TOv-4Z-Lu2"/>
+                                            <action selector="removePhoto:" destination="udI-Tl-fwg" id="AhN-AH-n6q"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -213,7 +213,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PaI-v0-vbB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UaY-Us-p78"/>
+                    <navigationItem key="navigationItem" id="UaY-Us-p78">
+                        <barButtonItem key="rightBarButtonItem" image="camera.fill" catalog="system" id="z7g-Aq-TDV">
+                            <connections>
+                                <action selector="uploadPicture:" destination="udI-Tl-fwg" id="TOv-4Z-Lu2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="NameField" destination="Dag-dJ-cN3" id="y7D-Ya-PG7"/>
                         <outlet property="SerialNumField" destination="sJC-e5-nuJ" id="lss-XT-0zQ"/>

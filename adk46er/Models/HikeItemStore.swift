@@ -12,6 +12,15 @@ class HikeItemStore {
     
     var allItems = [Hike]()
     
+    let hikeURL : URL = {
+        let docDirecs =
+            FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docDirec = docDirecs.first!
+        
+        return docDirec.appendingPathComponent("items.archive")
+    }()
+    
+    
     //Initializers
     init() {
         for _ in 0..<10 {
@@ -42,5 +51,12 @@ class HikeItemStore {
         let mItem = allItems[fIdx]
         allItems.remove(at: fIdx)
         allItems.insert(mItem, at: tIdx)
+    }
+    
+    
+    func saveChanges() -> Bool {
+        print("Saving to: \(hikeURL.path)")
+        
+        return NSKeyedArchiver.archiveRootObject(allItems, toFile: hikeURL.path)
     }
 }

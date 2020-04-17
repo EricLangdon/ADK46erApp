@@ -99,6 +99,9 @@ class DetailViewController : UIViewController, UITextFieldDelegate, UINavigation
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func removePhoto(_ sender: UIBarButtonItem) {
+        imageView.image = nil
+    }
     
 }
 

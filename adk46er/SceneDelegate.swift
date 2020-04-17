@@ -11,21 +11,30 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let hikeStore = HikeItemStore()
 
-
+    func applicationDidEnterBackground(_ app: UIApplication) {
+        let good = hikeStore.saveChanges()
+        if (good) {
+            print("Saved")
+            
+        } else {
+            print("Failed")
+        }
+    }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let itemStore = HikeItemStore()
         let imgStore = PhotoStore()
         
         let navController = window!.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
         
-        itemsController.itemStore = itemStore
+        itemsController.itemStore = hikeStore
         itemsController.imgStore = imgStore
     }
 
