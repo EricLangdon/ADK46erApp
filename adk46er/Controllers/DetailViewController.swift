@@ -17,11 +17,13 @@ class DetailViewController : UIViewController, UITextFieldDelegate, UINavigation
     @IBOutlet var imageView: UIImageView!
     
     
-    var item : HikeItem! {
+    var item : Hike! {
         didSet {
             navigationItem.title = item.name
         }
     }
+    
+    var imgStore: PhotoStore!
     
     let numberFormatter : NumberFormatter = {
         let formatter = NumberFormatter()
@@ -75,6 +77,7 @@ class DetailViewController : UIViewController, UITextFieldDelegate, UINavigation
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let img = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imgStore.setImg(img, forKey: item.key)
         imageView.image = img
         dismiss(animated: true, completion: nil)
     }

@@ -16,6 +16,7 @@ class ItemsViewController: UITableViewController {
     }
     
     var itemStore : HikeItemStore!
+    var imgStore : PhotoStore!
 
     //Overrides
     override func viewDidLoad() {
@@ -38,6 +39,7 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[row]
                 let detailVC = segue.destination as! DetailViewController
                 detailVC.item = item
+                detailVC.imgStore = imgStore
             }
         default:
             preconditionFailure("Unexpected segue identifier.")

@@ -10,7 +10,7 @@ import UIKit
 
 class HikeItemStore {
     
-    var allItems = [HikeItem]()
+    var allItems = [Hike]()
     
     //Initializers
     init() {
@@ -20,15 +20,15 @@ class HikeItemStore {
     }
     
     //Methods
-    @discardableResult func createItem() -> HikeItem {
+    @discardableResult func createItem() -> Hike {
         
-        let newItem = HikeItem(rand: true)
+        let newItem = Hike(rand: true)
         allItems.append(newItem)
         
         return newItem
     }
     
-    func removeItem(_ item : HikeItem) {
+    func removeItem(_ item : Hike) {
         if let idx = allItems.firstIndex(of: item) {
             allItems.remove(at: idx)
         }

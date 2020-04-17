@@ -20,9 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let itemStore = HikeItemStore()
+        let imgStore = PhotoStore()
+        
         let navController = window!.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
+        
         itemsController.itemStore = itemStore
+        itemsController.imgStore = imgStore
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

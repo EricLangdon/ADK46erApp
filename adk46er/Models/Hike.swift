@@ -8,12 +8,13 @@
 
 import UIKit
 
-class HikeItem : NSObject {
+class Hike : NSObject {
     
     var name : String
     var valDollars : Int
     var serialNum : String?
     var date : Date
+    var key : String
     
     //Initializers
     
@@ -22,6 +23,7 @@ class HikeItem : NSObject {
         valDollars = v
         serialNum = s
         date = Date()
+        key = UUID.init().uuidString
         
         super.init()
     }

@@ -14,10 +14,11 @@
 		32A37BC424281D5C001A2A03 /* adk46er.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BC224281D5C001A2A03 /* adk46er.xcdatamodeld */; };
 		32A37BC624281D69001A2A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A37BC524281D69001A2A03 /* Assets.xcassets */; };
 		32A37BC924281D69001A2A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A37BC724281D69001A2A03 /* LaunchScreen.storyboard */; };
-		32A37BD424281FAA001A2A03 /* HikeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD324281FAA001A2A03 /* HikeItem.swift */; };
+		32A37BD424281FAA001A2A03 /* Hike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD324281FAA001A2A03 /* Hike.swift */; };
 		32A37BD6242822D3001A2A03 /* HikeItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD5242822D3001A2A03 /* HikeItemStore.swift */; };
 		32A37BD824286856001A2A03 /* HikeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD724286856001A2A03 /* HikeItemCell.swift */; };
 		32A37BDA2428822B001A2A03 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A37BD92428822B001A2A03 /* DetailViewController.swift */; };
+		32C597BA244A2719004C0F86 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C597B9244A2719004C0F86 /* PhotoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +31,11 @@
 		32A37BC524281D69001A2A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32A37BC824281D69001A2A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32A37BCA24281D69001A2A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32A37BD324281FAA001A2A03 /* HikeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeItem.swift; sourceTree = "<group>"; };
+		32A37BD324281FAA001A2A03 /* Hike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hike.swift; sourceTree = "<group>"; };
 		32A37BD5242822D3001A2A03 /* HikeItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeItemStore.swift; sourceTree = "<group>"; };
 		32A37BD724286856001A2A03 /* HikeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeItemCell.swift; sourceTree = "<group>"; };
 		32A37BD92428822B001A2A03 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		32C597B9244A2719004C0F86 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,10 @@
 		32A37BD224281F71001A2A03 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				32A37BD324281FAA001A2A03 /* HikeItem.swift */,
+				32A37BD324281FAA001A2A03 /* Hike.swift */,
 				32A37BD5242822D3001A2A03 /* HikeItemStore.swift */,
 				32A37BD724286856001A2A03 /* HikeItemCell.swift */,
+				32C597B9244A2719004C0F86 /* PhotoStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,8 +182,9 @@
 			files = (
 				32A37BBE24281D5C001A2A03 /* ItemsViewController.swift in Sources */,
 				32A37BC424281D5C001A2A03 /* adk46er.xcdatamodeld in Sources */,
+				32C597BA244A2719004C0F86 /* PhotoStore.swift in Sources */,
 				32A37BD824286856001A2A03 /* HikeItemCell.swift in Sources */,
-				32A37BD424281FAA001A2A03 /* HikeItem.swift in Sources */,
+				32A37BD424281FAA001A2A03 /* Hike.swift in Sources */,
 				32A37BD6242822D3001A2A03 /* HikeItemStore.swift in Sources */,
 				32A37BBA24281D5C001A2A03 /* AppDelegate.swift in Sources */,
 				32A37BBC24281D5C001A2A03 /* SceneDelegate.swift in Sources */,
